@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="bienvenido_a">Bienvenido a</string>
+    <string name="programacion_de_dispositivos_moviles">Programacion de dispositivos moviles</string>
+</resources>
