@@ -42,6 +42,7 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
             category.value!!,
             qualification.value!!
         )
+        addMovies(movie)
         status.value = MOVIE_CREATED
 
     }
