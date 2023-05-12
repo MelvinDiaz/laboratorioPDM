@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movieItemCardView"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_margin="20dp"
+    android:layout_marginTop="16dp"
+    android:backgroundTint="#543864">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/star_wars" />
+
+    <TextView
+        android:id="@+id/movieItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="StarWars episodio 3 \n La venganza de los sith"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/movieItemQualification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+        android:text="9.8"
+        android:textColor="#FFBD69"
+        android:textSize="25dp" />
+
+
+</androidx.cardview.widget.CardView>
