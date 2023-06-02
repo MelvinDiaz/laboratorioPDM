@@ -18,15 +18,22 @@ class ActorViewModel(private val repository: ActorRepository) : ViewModel() {
     suspend fun getAllActors() = repository.getAllActors()
 
 
-    fun createActor() {
-        viewModelScope.launch {
-            if (name.value!!.isNotEmpty()) {
-                status.value = ACTOR_CREATED
-                val actor = ActorModel(name = name.value!!)
-                repository.addActor(actor)
+    private fun addActor(actor: ActorModel) = viewModelScope.launch {
+        repository.addActor(actor)
+    }
 
-            }
+    fun createActor() {
+        val actor = ActorModel(name = name.value.toString())
+
+        //validate data
+        if (actor.name.isEmpty()) {
+            status.value = WRONG_INFORMATION
+            return
         }
+
+        addActor(actor)
+
+        status.value = ACTOR_CREATED
 
 
     }

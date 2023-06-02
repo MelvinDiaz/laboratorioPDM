@@ -1,10 +1,12 @@
 package com.example.laboratorio05.data.model
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-@Entity(tableName = "actor_table", primaryKeys = ["actorId"])
+@Entity(tableName = "actor_table")
 data class ActorModel(
-    var actorId: Long = 0L,
-    val name: String,
+    @PrimaryKey(autoGenerate = true) var actorId: Long = 0L,
+    @ColumnInfo(name = "String") val name: String,
 )
 

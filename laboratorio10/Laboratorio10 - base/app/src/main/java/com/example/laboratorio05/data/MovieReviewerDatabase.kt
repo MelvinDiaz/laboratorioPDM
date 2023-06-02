@@ -12,7 +12,7 @@ import com.example.laboratorio05.data.model.CastModel
 import com.example.laboratorio05.data.model.MovieModel
 
 
-@Database(entities = [MovieModel::class, ActorModel::class, CastModel::class], version = 1)
+@Database(entities = [MovieModel::class, ActorModel::class, CastModel::class], version = 2)
 abstract class MovieReviewerDatabase : RoomDatabase() {
 
 
